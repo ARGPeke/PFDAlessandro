@@ -18,8 +18,13 @@
 
     .logo-style {
         width: 150px;
-        height: 150px;
+        height: auto;
+        object-fit: contain;
 }
+    .logo-style2:hover {
+        border: unset;
+    }    
+
     .division-line {
         width: 480px;
 }
@@ -45,16 +50,15 @@
         border: 1px solid black;
         border-radius: 7px;
     }
-    
-    
 }
  
 @media (max-width:992px){
     #header-container {
         flex-direction: row;
         justify-content: center;
-        img {
-            margin-left: 10%;
+        a:hover {
+            border: 1px solid transparent;
+            color: white;
         }
     .division-line,.division-line2 {
             width: 0;
@@ -74,20 +78,44 @@
     #especialidades {
         display: flex;
         flex-direction: row;
-        margin-top: 50px;
+        margin-top: 60px;
         text-align: center;
-    }
     
+    .title-especialidades {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+}   
     #especialidades .panaderia-container {
-        width: 400px;
-        height: 400px;
-        margin-right: 100px;
-        font-size: 20px;
+        margin-right: auto;
+        margin-bottom: 60px;
+        
     }    
     #especialidades .pasteleria-container {
-        width: 500px;
         margin-left: 100px;
         font-size: 20px;
+    }
+
+    .panaderia-img {
+        width:  400px;
+        height: auto;
+    }
+
+    .pasteleria-img {
+        width: 400px;
+        height: 266.66px;
+    }
+
+    .pasteleria-img:hover {
+        overflow: hidden;
+        transition: .2s;
+        transform: scale(0.9);
+    }
+
+    .panaderia-img:hover {
+        overflow: hidden;
+        transition: .2s;
+        transform: scale(0.9);
     }
     
     #conocenos {
@@ -95,12 +123,12 @@
         flex-direction: column;
         align-items: center;
         align-content: center;
+        margin-bottom: 10px;
     }
-    
     .division-line3 {
             width: 100%;
            color: black;
-           margin-bottom: 0px;
+           margin-bottom: 20px;
     }
     .division-line4 {
     margin-bottom: 20px;
@@ -115,10 +143,10 @@
     }
 
     .conocenos-container {
-        font-size: 20px;
+        font-size: 18 px;
         text-align: center;
         width: 500px;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 
     .title-contacto {
@@ -158,7 +186,7 @@
  
 @media (max-width:992px){
     #main-container {
-        margin-top: 150px;
+        margin-top: 130px;
     
     #especialidades {
         flex-direction: column;
@@ -168,22 +196,29 @@
     #especialidades .panaderia-container {
         width: 200px;
         height: 200px;
-        margin-top: 20px;
-        margin-right: 0;
-        font-size: 16px;
+        margin-right: auto;
+        .title-especialidades {
+            font-size: 25px;
+        }
     }
 
     #especialidades .pasteleria-container {
         width: 200px;
         height: 200px;
-        margin-top: 20px;
-        margin-left: 0;
-        font-size: 16px;
+        margin-left: auto;
+        .title-especialidades {
+            font-size: 25px;
+        }
+    }
+    .pasteleria-img {
+        width: 200px;
+        height: 200px;
     }
 
     .conocenos-container {
         font-size: 12px;
         padding:25px;
+        margin-top: 100px;
     }
 
     .preguntas-frecuentes {
@@ -206,8 +241,7 @@
     .mb-3 {
         text-align: center;
         margin-left: 20px;
-        margin-right: 20px;
-        
+        margin-right: 20px;        
     }
     .col-12 {
         align-items: center;
@@ -224,8 +258,8 @@
         grid-template-columns: 400px 400px;
         grid-template-rows: 218px;
         gap: 100px;
-        margin-left: 500px;
-        margin-bottom: 20px;
+        place-content: center;
+        margin-bottom: 40px;
 }
     .card:hover {
         background-color: #ffd0f1;
@@ -235,8 +269,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 40px;
-}
+        margin-bottom: 30px;
+        margin-top: auto;
+    }
 }
 @media (max-width:992px){
     #main-past{
@@ -272,8 +307,6 @@
     display: flex;
     flex-direction: column;
     margin: 20px 50px 20px 0px;
-    align-items: start;
-
     }
     .social-style {
     display: flex;
@@ -294,8 +327,9 @@
     text-decoration: none;
     color: black;
     font-size: 15px;
-    text-align: center;
     padding: 4px 4px;
+    border: 1px solid transparent;
+    
     }
 
     .icon-img {
@@ -304,20 +338,18 @@
     a:hover {
         border: 1px solid black;
         border-radius: 10px;
+        padding: 8px 4px;
     }
 }
 
 @media (max-width:992px){
     #footer {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
+        flex-direction: column;
         align-items: center;
-        margin-bottom: 4%;
+        justify-content: center;
+    a:hover {
+        border: 1px solid transparent;
     }
-
-    .contacto-style, .social-style, .payment-style, .icon-img, .icon-link {
-        margin-right: 20px;
-        margin-left: 20px;
     }
 
     .grid-container {
@@ -325,10 +357,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        align-content: center;
         margin-left: 0;
         margin-bottom: 40px;
-        
     }
 
     .grid-item {
