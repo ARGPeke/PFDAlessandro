@@ -16,33 +16,31 @@
   top: 0;
   z-index: 1000;
 }
-
 #header-container .logo-style {
   width: 150px;
-  height: 150px;
+  height: auto;
+  object-fit: contain;
 }
-
+#header-container .logo-style2:hover {
+  border: unset;
+}
 #header-container .division-line {
   width: 480px;
 }
-
 #header-container .division-line2 {
   width: 480px;
   margin-bottom: 20px;
 }
-
 #header-container .nav-but {
   font-size: 16px;
   text-align: center;
   line-height: 30px;
 }
-
 #header-container .nav-text {
   padding: 0 10px;
   text-decoration: none;
   color: black;
 }
-
 #header-container a:hover {
   border: 1px solid black;
   border-radius: 7px;
@@ -53,8 +51,9 @@
     flex-direction: row;
     justify-content: center;
   }
-  #header-container img {
-    margin-left: 10%;
+  #header-container a:hover {
+    border: 1px solid transparent;
+    color: white;
   }
   #header-container .division-line, #header-container .division-line2 {
     width: 0;
@@ -70,67 +69,76 @@
   align-content: center;
   margin-top: 250px;
 }
-
 #main-container #especialidades {
   display: flex;
   flex-direction: row;
-  margin-top: 50px;
+  margin-top: 60px;
   text-align: center;
 }
-
-#main-container #especialidades .panaderia-container {
-  width: 400px;
-  height: 400px;
-  margin-right: 100px;
-  font-size: 20px;
+#main-container #especialidades .title-especialidades {
+  font-size: 35px;
+  margin-bottom: 30px;
 }
-
+#main-container #especialidades .panaderia-container {
+  margin-right: auto;
+  margin-bottom: 60px;
+}
 #main-container #especialidades .pasteleria-container {
-  width: 500px;
   margin-left: 100px;
   font-size: 20px;
 }
-
+#main-container .panaderia-img {
+  width: 400px;
+  height: auto;
+}
+#main-container .pasteleria-img {
+  width: 400px;
+  height: 266.66px;
+}
+#main-container .pasteleria-img:hover {
+  overflow: hidden;
+  transition: 0.2s;
+  transform: scale(0.9);
+}
+#main-container .panaderia-img:hover {
+  overflow: hidden;
+  transition: 0.2s;
+  transform: scale(0.9);
+}
 #main-container #conocenos {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
+  margin-bottom: 10px;
 }
-
 #main-container .division-line3 {
   width: 100%;
   color: black;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
-
 #main-container .division-line4 {
   margin-bottom: 20px;
   margin-top: 0;
 }
-
 #main-container .faq {
   margin-top: 20px;
 }
-
 #main-container .preguntas-frecuentes {
   margin-bottom: 20px;
 }
-
 #main-container .conocenos-container {
-  font-size: 20px;
+  font-size: 18 px;
   text-align: center;
   width: 500px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
-
 #main-container .title-contacto {
   margin-top: 20px;
   animation-duration: 4s;
   animation-name: aparecer;
   animation-iteration-count: infinite;
 }
-
 @keyframes aparecer {
   0% {
     opacity: 0;
@@ -145,14 +153,12 @@
   text-align: left;
   margin-top: 20px;
 }
-
 #main-container .btn {
   background-color: #ffd0f1;
   color: black;
   border: none;
   margin-bottom: 20px;
 }
-
 #main-container .btn:hover {
   background-color: black;
   color: #ffd0f1;
@@ -160,7 +166,7 @@
 
 @media (max-width: 992px) {
   #main-container {
-    margin-top: 150px;
+    margin-top: 130px;
   }
   #main-container #especialidades {
     flex-direction: column;
@@ -169,20 +175,27 @@
   #main-container #especialidades .panaderia-container {
     width: 200px;
     height: 200px;
-    margin-top: 20px;
-    margin-right: 0;
-    font-size: 16px;
+    margin-right: auto;
+  }
+  #main-container #especialidades .panaderia-container .title-especialidades {
+    font-size: 25px;
   }
   #main-container #especialidades .pasteleria-container {
     width: 200px;
     height: 200px;
-    margin-top: 20px;
-    margin-left: 0;
-    font-size: 16px;
+    margin-left: auto;
+  }
+  #main-container #especialidades .pasteleria-container .title-especialidades {
+    font-size: 25px;
+  }
+  #main-container .pasteleria-img {
+    width: 200px;
+    height: 200px;
   }
   #main-container .conocenos-container {
     font-size: 12px;
     padding: 25px;
+    margin-top: 100px;
   }
   #main-container .preguntas-frecuentes {
     text-align: center;
@@ -211,26 +224,24 @@
 #main-past {
   margin-top: 260px;
 }
-
 #main-past .grid-container {
   display: grid;
   grid-template-columns: 400px 400px;
   grid-template-rows: 218px;
   gap: 100px;
-  margin-left: 500px;
-  margin-bottom: 20px;
+  place-content: center;
+  margin-bottom: 40px;
 }
-
 #main-past .card:hover {
   background-color: #ffd0f1;
 }
-
 #main-past .title-past {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  margin-top: auto;
 }
 
 @media (max-width: 992px) {
@@ -261,26 +272,21 @@
   background-color: #ffd0f1;
   font-size: 20px;
 }
-
 #footer .contacto-style {
   display: flex;
   flex-direction: column;
   margin: 20px 50px 20px 0px;
-  align-items: start;
 }
-
 #footer .social-style {
   display: flex;
   flex-direction: column;
   margin: 20px 50px 20px 0px;
 }
-
 #footer .payment-style {
   display: flex;
   flex-direction: column;
   margin: 20px 50px 20px 0px;
 }
-
 #footer .icon-link {
   display: flex;
   flex-direction: row;
@@ -288,36 +294,32 @@
   text-decoration: none;
   color: black;
   font-size: 15px;
-  text-align: center;
   padding: 4px 4px;
+  border: 1px solid transparent;
 }
-
 #footer .icon-img {
   margin-right: 5px;
 }
-
 #footer a:hover {
   border: 1px solid black;
   border-radius: 10px;
+  padding: 8px 4px;
 }
 
 @media (max-width: 992px) {
   #footer {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 4%;
+    justify-content: center;
   }
-  .contacto-style, .social-style, .payment-style, .icon-img, .icon-link {
-    margin-right: 20px;
-    margin-left: 20px;
+  #footer a:hover {
+    border: 1px solid transparent;
   }
   .grid-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: center;
     margin-left: 0;
     margin-bottom: 40px;
   }
@@ -327,6 +329,6 @@
   .faq {
     font-size: 10px;
   }
-} 
+}
 
 /*# sourceMappingURL=styles.css.map */
